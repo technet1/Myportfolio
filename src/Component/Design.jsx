@@ -40,22 +40,22 @@ const Design = () => {
       className="w-full h-full hidden lg:block bg-black p-24 flex items-end justify-center relative overflow-hidden"
       onMouseMove={handleMouseMove}
     >
-      <h1 className="text-[50vh] font-bold text-zinc-800 pointer-events-none">
+      <h1 className="text-[50vh] font-bold text-zinc-800 text-white/4 pointer-events-none">
         Designs
       </h1>
 
       {/* Floating Images */}
       {trailImages.map((img) => (
         <img
-          key={img.id}
-          src={img.src}
-          className="w-56 h-56 object-cover rounded-xl absolute pointer-events-none fadeImage"
-          style={{
-            top: img.y,
-            left: img.x,
-            transform: "translate(-50%, -50%)",
-          }}
-        />
+  key={img.id}
+  src={img.src}
+  className="w-64 h-64 object-cover rounded-2xl absolute pointer-events-none shadow-2xl border border-white/10 fadeImage"
+  style={{
+    top: img.y,
+    left: img.x,
+    transform: `translate(-50%, -50%) rotate(${Math.random() * 40 - 20}deg)`,
+  }}
+/>
       ))}
 
       {/* Fade-out animation */}

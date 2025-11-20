@@ -36,32 +36,40 @@ const App = () => {
   }, []);
   return (
 <>
-  <Nav />
+      <Nav />
 
-  <section id="hero"><Hero /></section>
+      {/* Each section must have a unique id */}
+      <section id="hero">
+        <Hero />
+      </section>
 
-  <section id="about"><AboutMe /></section>
-  
-  <BentoGrid />
+      <section id="about">
+        <AboutMe />
+      </section>
+      <BentoGrid/>
 
-  <section id="collab">
-    <Collab /> 
-    <Project />          {/* ← Mobile pe dikhega */}
-  </section>
+      <section id="collab">
+        <Collab /> 
+        <Project/>
+      </section>
 
-  <section id="projects">
-    <Projects />         {/* ← Desktop pe dikhega */}
-  </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      
 
-  <section id="designs">
-    {/* <Design /> */}    {/* ← Agar banaya hai toh uncomment kar dena */}
-    <Designs />          {/* ← Mobile pe dikhega */}
-  </section>
+    <section id="designs" className="relative min-h-screen hidden lg:block">
+        <Design />
+      </section>
 
-  <section id="contact">
-    <Footer />
-  </section>
-</>
+      {/* Mobile & Tablet ke liye */}
+      <section className="lg:hidden py-20">
+        <Designs />
+      </section>
+      <section id="contact">
+        <Footer />
+      </section>
+    </>
   )
 }
 
