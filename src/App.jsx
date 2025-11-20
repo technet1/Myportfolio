@@ -1,16 +1,23 @@
-import React from 'react'
+import React from "react";
 import Lenis from "@studio-freight/lenis";
 import { useEffect } from "react";
-import Nav from './Copmonent/Nav'
-import Hero from './Copmonent/Hero'
-import AboutMe from './Copmonent/Aboutme'
-import BentoGrid from './Copmonent/BentoGrid'
-import Collab from './Copmonent/Collab'
-import Projects from './Copmonent/Projects';
-import Design from './Copmonent/Design';
-import Footer from './Copmonent/Footer';
-import Project from './Copmonent/Project';
-import Designs from './Copmonent/Designs';
+
+// Components
+import Nav from "./Component/Nav";
+import Hero from "./Component/Hero";
+import AboutMe from "./Component/AboutMe";
+import BentoGrid from "./Component/BentoGrid";
+import Collab from "./Component/Collab";
+
+// Desktop Sections
+import Projects from "./Component/Projects";   // ← desktop wala slider
+import Design from "./Component/Design";         // ← agar banaya hai (optional)
+
+// Mobile/Tablet Sections
+import Project from "./Component/Project";     // ← mobile wala cards
+import Designs from "./Component/Designs";       // ← mobile wala designs slider
+
+import Footer from "./Component/Footer";
 
 const App = () => {
   useEffect(() => {
@@ -29,37 +36,32 @@ const App = () => {
   }, []);
   return (
 <>
-      <Nav />
+  <Nav />
 
-      {/* Each section must have a unique id */}
-      <section id="hero">
-        <Hero />
-      </section>
+  <section id="hero"><Hero /></section>
 
-      <section id="about">
-        <AboutMe />
-      </section>
-      <BentoGrid/>
+  <section id="about"><AboutMe /></section>
+  
+  <BentoGrid />
 
-      <section id="collab">
-        <Collab /> 
-        <Project/>
-      </section>
+  <section id="collab">
+    <Collab /> 
+    <Project />          {/* ← Mobile pe dikhega */}
+  </section>
 
-      <section id="projects">
-        <Projects />
-      </section>
-      
+  <section id="projects">
+    <Projects />         {/* ← Desktop pe dikhega */}
+  </section>
 
-      <section id="designs">
-        <Design />
-        <Designs/>
-      </section>
+  <section id="designs">
+    {/* <Design /> */}    {/* ← Agar banaya hai toh uncomment kar dena */}
+    <Designs />          {/* ← Mobile pe dikhega */}
+  </section>
 
-      <section id="contact">
-        <Footer />
-      </section>
-    </>
+  <section id="contact">
+    <Footer />
+  </section>
+</>
   )
 }
 
