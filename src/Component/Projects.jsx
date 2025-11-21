@@ -20,7 +20,7 @@ function Projects() {
     "A clone of the Sundown Studio website, focusing on replicating the original design and functionality. The project involved creating a pixel-perfect, responsive layout that mirrored the aesthetic and user experience of the original site.",
   image: sun,
   tags: ["HTML", "JavaScript", "CSS"],
-  link: "downsun.netlify.app",
+  link: "https://downsun.netlify.app",
 },
 {
   title: "SIDCUP Family Golf",
@@ -28,7 +28,7 @@ function Projects() {
     "A replica of the SIDCUP Family Golf website, designed to match the original layout, animations, and interactions. The project emphasizes pixel-perfect execution, responsive structure, and smooth user flow to recreate the same visual appeal and browsing experience across all screen sizes.",
   image: golf,
   tags: ["HTML", "JavaScript", "CSS"],
-  link: "cupfamilygolf.netlify.app",
+  link: "https://cupfamilygolf.netlify.app",
 },
 {
   title: "Obys Agency",
@@ -44,7 +44,7 @@ function Projects() {
     "A high-fidelity clone of the Exo Ape website, closely recreate its immersive design and fluid interface. The project highlights pixel-perfect structure, responsive performance, and interactive elements that preserve the original site’s visual storytelling and motion effects.",
   image: exo,
   tags: ["React", "Tailwind", "Framer Motion"],
-  link: "exooape.netlify.app",
+  link: "https://exooape.netlify.app",
 },
 {
   title: "My Portfolio",
@@ -52,7 +52,7 @@ function Projects() {
     "A modern personal portfolio, designed to present my skills, projects, and journey with clarity and style. The layout is fully responsive, visually polished, and structured to deliver a smooth browsing experience across devices while maintaining a professional presentation.",
   image: v3,
   tags: ["React", "Tailwind", "Framer Motion"],
-  link: "https://abhushekanand.netlify.app",
+  link: "https://myportfolio-eight-tawny-96.vercel.app/",
 },
 {
   title: "CineBase.",
@@ -68,7 +68,7 @@ function Projects() {
     "A simple yet interactive browser-based game. The project focuses on dynamic gameplay, responsive UI, and smooth animations, offering a fun experience while demonstrating DOM manipulation, event handling, and core logic implementation using fundamental web technologies.",
   image: game,
   tags: ["HTML", "JavaScript", "CSS"],
-  link: "bubbblegames.netlify.app",
+  link: "https://bubbblegames.netlify.app",
 },
   ];
 

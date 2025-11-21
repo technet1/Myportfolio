@@ -63,7 +63,7 @@ const App = () => {
       </section>
 
       {/* Mobile & Tablet ke liye */}
-      <section className="lg:hidden py-20">
+      <section className="  ">
         <Designs />
       </section>
       <section id="contact">

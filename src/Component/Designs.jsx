@@ -31,7 +31,7 @@ const Designs = () => {
   ];
 
   return (
-    <section id="designs" className="bg-black py-20 lg:hidden">
+    <section id="designs" className="bg-black py-20   lg:hidden">
       <div className="px-6 md:px-12">
         
 
@@ -79,5 +79,4 @@ const Designs = () => {
     </section>
   );
 };
-
 export default Designs;
