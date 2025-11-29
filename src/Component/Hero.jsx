@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import dp from "../assets/dp.jpeg";
+import dp from "../assets/dp.png";
 import img5 from "../assets/5.png";
 
 const Hero = () => {
@@ -38,7 +38,7 @@ const Hero = () => {
               animate={{ opacity: 1 }}
               transition={{ staggerChildren: 0.1, delayChildren: 0.6 }}
             >
-              {["Hey, I’m ", <strong className="font-semibold text-white">Abhishek</strong>, " — a ", 
+              {["Hey, I’m ", <strong className="font-semibold text-white"> Abhishek</strong>, " — a ", 
                <strong className="font-semibold text-white">Frontend Developer, UI & Graphic Designer</strong>, 
                " creating brands,", <br className="hidden sm:block" key="br1" />, 
                "interfaces, and experiences that blend creativity with functionality.", 

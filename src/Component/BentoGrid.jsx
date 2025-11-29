@@ -129,7 +129,7 @@ const images = [img1, img2, img3, img4, img5, img6];
           <button
             onClick={() =>
               window.open(
-                "https://drive.google.com/file/d/1yUhzDtk_UzUzvUd1uFak_yNp-3Z6N5re/view?usp=drive_link",
+                "https://drive.google.com/file/d/1xQeme3nAjh31bdgdGym8d3_kz_Lng_vb/view?usp=drive_link",
                 "_blank",
                 "noopener,noreferrer"
               )

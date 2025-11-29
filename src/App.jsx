@@ -20,20 +20,28 @@ import Designs from "./Component/Designs";       // ← mobile wala designs slid
 import Footer from "./Component/Footer";
 
 const App = () => {
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      smooth: true,
-      smoothTouch: false,
-    });
+useEffect(() => {
+  const lenis = new Lenis({
+    duration: 1.4,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true,
+    smoothTouch: false,
+  });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+  // Ye line add kar → Nav use kar sake Lenis ko
+  window.lenis = lenis;
 
+  function raf(time) {
+    lenis.raf(time);
     requestAnimationFrame(raf);
-  }, []);
+  }
+  requestAnimationFrame(raf);
+
+  return () => {
+    lenis.destroy();
+    delete window.lenis;
+  };
+}, []);
   return (
 <>
       <Nav />
@@ -53,12 +61,12 @@ const App = () => {
         <Project/>
       </section>
 
-      <section id="projects">
+      <section id="projects-desktop">
         <Projects />
       </section>
       
 
-    <section id="designs" className="relative min-h-screen hidden lg:block">
+    <section id="designs-m" className="relative min-h-screen hidden lg:block">
         <Design />
       </section>
 

@@ -6,15 +6,16 @@ const Nav = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   // Smooth scroll function
- const scrollToSection = (sectionId) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    window.scrollTo({
-      top: element.offsetTop - 100, // navbar height
-      behavior: "smooth"
+const scrollToSection = (sectionId) => {
+  // Lenis ke through scroll karenge (window.scrollTo nahi!)
+  if (window.lenis) {
+    window.lenis.scrollTo(`#${sectionId}`, {
+      offset: -100,     // navbar height ke liye
+      duration: 1.5,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
   }
-  setIsMenuOpen(false);
+  setIsMenuOpen(false); // mobile menu close
 };
 
 
@@ -44,11 +45,11 @@ const Nav = () => {
               <button onClick={() => scrollToSection("collab")} className="hover:text-gray-400 transition">
                 Collab
               </button>
-              <button onClick={() => scrollToSection("projects")} className="hover:text-gray-400 transition">
+              <button onClick={() => scrollToSection("projects-desktop")} className="hover:text-gray-400 transition">
                 Projects
               </button>
               <span className="text-gray-600">|</span>
-              <button onClick={() => scrollToSection("designs")} className="hover:text-gray-400 transition">
+              <button onClick={() => scrollToSection("designs-m")} className="hover:text-gray-400 transition">
                 Designs
               </button>
 
@@ -81,7 +82,7 @@ const Nav = () => {
               <button onClick={() => scrollToSection("collab")} className="text-left hover:text-gray-400 py-2">
                 Collab
               </button>
-              <button onClick={() => scrollToSection("projects")} className="text-left hover:text-gray-400 py-2">
+              <button onClick={() => scrollToSection("projects-desktop")} className="text-left hover:text-gray-400 py-2">
                 Projects
               </button>
               <div className="h-px bg-gray-800 my-4" />
